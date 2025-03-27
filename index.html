@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game untuk Kamu ❤</title>
+    <style>
+      body {
+        text-align: center;
+        background-color: pink;
+        font-family: Arial, sans-serif;
+      }
+      h1 {
+        color: red;
+      }
+      #game,
+      #surprise {
+        margin-top: 20px;
+      }
+      button {
+        background-color: red;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 10px;
+        margin-top: 10px;
+      }
+      button:hover {
+        background-color: darkred;
+      }
+      #surprise {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Halo KAK! ❤</h1>
+    <p>Aku punya game kecil buat kamu...</p>
+
+    <div id="game">
+      <p>Pertanyaan: siapa yang suka duluan ? (tulis nya pake nama panjang)</p>
+      <input type="text" id="answer" placeholder="masukan jawaban" />
+      <button onclick="checkAnswer()">Jawab</button>
+    </div>
+
+    <div id="surprise">
+      <p>❤ Yey! Jawaban kamu benar! ❤</p>
+      <p>dan terbukti bawah kamu yang suka duluan yeay! 😘</p>
+      <img
+        src="foto/WhatsApp Image 2025-03-27 at 20.04.30_3f39db3c.jpg"
+        ,
+        alt="Foto orang bucin"
+        width="200"
+      />
+      <img
+        src="foto/WhatsApp Image 2025-03-27 at 20.01.30_479c5428.jpg"
+        alt=""
+        width="200"
+      />
+    </div>
+
+    <script>
+      function checkAnswer() {
+        let answer = document.getElementById("answer").value;
+        let correctAnswer = "nadira alifya rahma"; // Ganti dengan tanggal yang benar
+
+        if (answer === correctAnswer) {
+          document.getElementById("game").style.display = "none";
+          document.getElementById("surprise").style.display = "block";
+        } else {
+          alert("Jawabannya salah, coba lagi ya kak! 😘");
+        }
+      }
+    </script>
+  </body>
+</html>
